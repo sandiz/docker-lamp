@@ -51,7 +51,7 @@ RUN apt-get install mariadb-common mariadb-server mariadb-client -y
 RUN apt-get install postfix -y
 RUN apt-get install git composer  tree vim curl ftp -y
 RUN pecl install memcached
-RUN echo extension=memcached.so >> /usr/local/etc/php/conf.d/memcached.ini
+#RUN echo extension=memcached.so >> /usr/local/etc/php/conf.d/memcached.ini
  
 ENV LOG_STDOUT **Boolean**
 ENV LOG_STDERR **Boolean**
