@@ -10,7 +10,7 @@ RUN apt-get upgrade -y
 
 COPY debconf.selections /tmp/
 RUN debconf-set-selections /tmp/debconf.selections
-
+RUN export LANG=en_US.UTF-8 
 RUN apt-get install -y zip unzip
 RUN apt-get install -y \
 	php7.0 \
