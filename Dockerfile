@@ -50,7 +50,7 @@ RUN apt-get install apache2 libapache2-mod-php7.0 -y
 RUN apt-get install mariadb-common mariadb-server mariadb-client -y
 RUN apt-get install postfix -y
 RUN apt-get install git composer  tree vim curl ftp -y
-RUN pecl install memcached \
+RUN pecl install memcached
 RUN echo extension=memcached.so >> /usr/local/etc/php/conf.d/memcached.ini
  
 ENV LOG_STDOUT **Boolean**
@@ -64,7 +64,6 @@ COPY index.php /var/www/html/
 COPY run-lamp.sh /usr/sbin/
 
 RUN a2enmod rewrite
-RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN chmod +x /usr/sbin/run-lamp.sh
 RUN chown -R www-data:www-data /var/www/html
 
