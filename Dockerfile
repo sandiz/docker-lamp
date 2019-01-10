@@ -50,7 +50,7 @@ RUN apt-get install apache2 libapache2-mod-php7.0 -y
 RUN apt-get install mariadb-common mariadb-server mariadb-client -y
 RUN apt-get install postfix -y
 RUN apt-get install git composer  tree vim curl ftp -y
-RUN apt-get install memcached
+RUN apt-get install memcached -y
 RUN service memcached restart
 
 RUN add-apt-repository ppa:ondrej/apache2
