@@ -47,6 +47,7 @@ RUN apt-get install -y \
 	php7.0-xsl \
 	php7.0-zip
 RUN apt-get install apache2 libapache2-mod-php7.0 software-properties-common -y
+RUN apt-get install mariadb-common mariadb-server mariadb-client -y	
 RUN apt-get install git composer  tree vim curl ftp -y
 RUN apt-get install memcached -y
 RUN service memcached restart
